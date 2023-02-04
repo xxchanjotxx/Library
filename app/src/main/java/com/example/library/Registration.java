@@ -54,7 +54,7 @@ public class Registration extends AppCompatActivity {
 
 
         if(fAuth.getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(), test.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
 
@@ -100,7 +100,7 @@ public class Registration extends AppCompatActivity {
                                     Log.d(TAG, "onSuccess: User Profile is Created for " + userID);
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(), test.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
                             Toast.makeText(Registration.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }

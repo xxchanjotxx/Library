@@ -72,7 +72,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), test.class));
+                            startActivity(new Intent(getApplicationContext(), Registration.class));
                         }else {
                             Toast.makeText(Login.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.INVISIBLE);
@@ -86,7 +86,7 @@ public class Login extends AppCompatActivity {
         mCreateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Registration.class));
+                startActivity(new Intent(getApplicationContext(), Registration.class));
             }
         });
 
@@ -129,5 +129,7 @@ public class Login extends AppCompatActivity {
                 passwordResetDialog.create().show();
             }
         });
+
+
     }
 }
